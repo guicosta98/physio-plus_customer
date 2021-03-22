@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
@@ -25,15 +26,15 @@ import java.time.LocalDate;
 public class Customer {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customers_id_seq")
+	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "customers_id_seq")
 	public Long id;
 
 	public String name;
 
 	public String email;
 
-	@Column(name = "address_id")
-	public Long addressId;
+	@OneToOne
+	public Address address;
 
 	public LocalDate birthdate;
 
