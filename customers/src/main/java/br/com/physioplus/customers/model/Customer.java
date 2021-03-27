@@ -25,21 +25,21 @@ import java.time.LocalDate;
 @Table(name = "customers", schema = "public")
 public class Customer {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "customers_id_seq")
-	public Long id;
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "customers_id_seq")
+	 private Long id;
 
-	public String name;
+	 private String name;
 
-	public String email;
+	 private String email;
 
-	@OneToOne
-	public Address address;
+	 @OneToOne
+	 private Address address;
 
-	public LocalDate birthdate;
+	 private LocalDate birthdate;
 
-	public String phone;
+	 private String phone;
 
-	public String cpf;
+	 private String cpf;
 
 }

@@ -1,5 +1,6 @@
 package br.com.physioplus.customers.service;
 
+import br.com.physioplus.customers.dto.input.CustomerInputDTO;
 import br.com.physioplus.customers.dto.output.CustomerOutputDTO;
 import br.com.physioplus.customers.model.Customer;
 import br.com.physioplus.customers.repository.CustomerRepository;
@@ -14,7 +15,11 @@ public class CustomerService {
 
 	 private CustomerRepository customerRepository;
 
-	 public Optional<Customer> getCustomerById(Long id){
-	 	 return customerRepository.findById(id);
+	 public Optional<Customer> getCustomerById(Long id) {
+			return customerRepository.findById(id);
+	 }
+
+	 public CustomerOutputDTO createCustomer(CustomerInputDTO customerInput){
+	 	 return new CustomerOutputDTO();
 	 }
 }
