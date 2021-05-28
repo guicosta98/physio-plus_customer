@@ -8,9 +8,7 @@ import java.time.LocalDate;
 @Data
 public class CustomerInputDTO {
 
-	 private Long id;
-
-	 private Long name;
+	 private String name;
 
 	 private String email;
 
@@ -22,4 +20,3 @@ public class CustomerInputDTO {
 
 	 private String cpf;
 }
-
